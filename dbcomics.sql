@@ -86,8 +86,7 @@ INSERT INTO `sanpham` (`id`, `tensanpham`, `hinhanh`) VALUES
 (2, 'Truyện Action', 'https://static2.vieon.vn/vieplay-image/poster_v4/2023/10/06/y8xah1qo_660x946-spyxfamily-3_360_534.jpeg'),
 (3, 'Truyện Romcom', 'https://i7.bumcheo.info/manga/28/28414/cover-romcom.thumb_500x.jpg'),
 (4, 'Truyện Shounen', 'https://static.wikia.nocookie.net/jujutsu-kaisen/images/e/e0/Jujutsu_Kaisen_Cursed_Clash_Key_Visual.png/revision/latest?cb=20230702024226'),
-(8, 'Đơn Hàng', 'https://e7.pngegg.com/pngimages/860/464/png-clipart-shopping-cart-software-button-e-commerce-computer-icons-online-shopping-button-blue-angle-thumbnail.png')
-();
+(8, 'Đơn Hàng', 'https://e7.pngegg.com/pngimages/860/464/png-clipart-shopping-cart-software-button-e-commerce-computer-icons-online-shopping-button-blue-angle-thumbnail.png');
 
 -- --------------------------------------------------------
 
