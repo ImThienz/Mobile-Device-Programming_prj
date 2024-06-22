@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Cấu trúc bảng cho bảng `chitietdonhang`
 --
 
-CREATE TABLE `chitietdonhang` (
+CREATE TABLE chitietdonhang (
   `iddonhang` int(11) NOT NULL,
   `idsp` int(11) NOT NULL,
   `soluong` int(11) NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE `chitietdonhang` (
 -- Đang đổ dữ liệu cho bảng `chitietdonhang`
 --
 
-INSERT INTO `chitietdonhang` (`iddonhang`, `idsp`, `soluong`, `gia`) VALUES
+INSERT INTO chitietdonhang (`iddonhang`, `idsp`, `soluong`, `gia`) VALUES
 ('11','5','1','99000');
 
 -- --------------------------------------------------------
@@ -47,7 +47,7 @@ INSERT INTO `chitietdonhang` (`iddonhang`, `idsp`, `soluong`, `gia`) VALUES
 -- Cấu trúc bảng cho bảng `donhang`
 --
 
-CREATE TABLE `donhang` (
+CREATE TABLE donhang (
   `id` int(11) NOT NULL,
   `iduser` int(11) NOT NULL,
   `diachi` text NOT NULL,
@@ -61,7 +61,7 @@ CREATE TABLE `donhang` (
 -- Đang đổ dữ liệu cho bảng `donhang`
 --
 
-INSERT INTO `donhang` (`id`, `iduser`, `diachi`, `sodienthoai`, `email`, `soluong`, `tongtien`) VALUES
+INSERT INTO donhang (`id`, `iduser`, `diachi`, `sodienthoai`, `email`, `soluong`, `tongtien`) VALUES
 ('16','7','14 nguyen du','0123456789','vtdhnv@gmail.com','11','1791000');
 
 -- --------------------------------------------------------
@@ -70,17 +70,17 @@ INSERT INTO `donhang` (`id`, `iduser`, `diachi`, `sodienthoai`, `email`, `soluon
 -- Cấu trúc bảng cho bảng `sanpham`
 --
 
-CREATE TABLE `sanpham` (
+CREATE TABLE sanpham (
   `id` int(11) NOT NULL,
   `tensanpham` varchar(100) NOT NULL,
-  `hinhanh` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  `hinhanh` text NOT NULL)
+ ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `sanpham`
 --
 
-INSERT INTO `sanpham` (`id`, `tensanpham`, `hinhanh`) VALUES
+INSERT INTO sanpham (`id`, `tensanpham`, `hinhanh`) VALUES
 (0, 'Trang chủ ', 'https://vi.seaicons.com/wp-content/uploads/2017/04/home-icon3.png'),
 (1, 'Truyện Isekai', 'https://upload.wikimedia.org/wikipedia/vi/5/56/Isekai_Quartet_art.jpg'),
 (2, 'Truyện Action', 'https://static2.vieon.vn/vieplay-image/poster_v4/2023/10/06/y8xah1qo_660x946-spyxfamily-3_360_534.jpeg'),
@@ -94,7 +94,7 @@ INSERT INTO `sanpham` (`id`, `tensanpham`, `hinhanh`) VALUES
 -- Cấu trúc bảng cho bảng `sanphammoi`
 --
 
-CREATE TABLE `sanphammoi` (
+CREATE TABLE sanphammoi (
   `id` int(11) NOT NULL,
   `tensp` varchar(250) NOT NULL,
   `giasp` varchar(100) NOT NULL,
@@ -104,10 +104,10 @@ CREATE TABLE `sanphammoi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `sanphammoi`
+-- Đang đổ dữ liệu cho bảng `sanphammoi
 --
 
-INSERT INTO `sanphammoi` (`id`, `tensp`, `giasp`, `hinhanh`, `mota`, `loai`) VALUES
+INSERT INTO sanphammoi ('id', 'tensp', 'giasp', 'hinhanh', 'mota', 'loai') VALUES
 (1, 'Jujutsu Kaisen V1', '50000', 'https://upload.wikimedia.org/wikipedia/vi/8/82/Jujutsu_Kaisen_vol_1_cover.jpeg', 'Trong vũ trụ Chú thuật hồi chiến, tất cả sinh vật sống đều phát ra một loại năng lượng được gọi là chú lực, sinh ra từ cảm xúc tiêu cực chảy đều trong cơ thể. Những người bình thường không thể kiểm soát được dòng chảy này trong cơ thể họ. Hậu quả là họ để cho chú lực phát tán ra ngoài, hình thành nên nguyền hồn, một chủng sinh vật có dã tâm làm chuyện tai ác với nhân loại. Nguyền hồn xuất hiện dưới hình thù những con quái vật ghê rợn.\n\nChú thuật sư là những người có khả năng kiểm soát dòng chảy chú lực trong cơ thể họ, cho phép họ sử dụng chú lực theo ý muốn cũng như giảm thiểu sự phát tán của nó. Chú thuật sư và nguyền hồn cấp cao có thể tinh luyện loại năng lượng này và sử dụng nó để thực hiện chú thuật thức. Loại thuật thức này dường như là đặc thù với mỗi cá nhân hoặc gia tộc của họ. Bành trướng lĩnh vực là một dạng nâng cấp của chú thuật thức, qua đó chú thuật sư có thể sử dụng chú lực để tạo dựng nên một kết giới bao trùm khu vực xung quanh. Trong kết giới đó, mọi đòn tấn công của người sử dụng nó trở nên mạnh hơn.', 4),
 (2, 'Mushoku Tensei N9', '80000', 'https://comichub.blob.core.windows.net/high/def8df4a-625a-43bc-9679-fea2bd84ece2.jpg', 'Một otaku thất nghiệp vừa chạm đến điểm thấp nhất trong cuộc đời. Anh ấy không muốn gì hơn ngoài khả năng bắt đầu lại, nhưng đúng như anh ấy nghĩ điều đó có thể xảy ra… anh ấy bị một chiếc xe tải đâm và chết! Ngạc nhiên thay, anh thấy mình tái sinh trong cơ thể một đứa trẻ sơ sinh trong một thế giới mới kỳ lạ của kiếm và ma thuật. Danh tính của anh ấy bây giờ là Rudeus Greyrat, nhưng anh ấy vẫn giữ được ký ức về kiếp trước. Tái sinh trong một gia đình mới, Rudeus tận dụng những kinh nghiệm trong quá khứ của mình để tiến lên trong thế giới giả tưởng này với tư cách là một thần đồng thực sự có năng khiếu trưởng thành hơn tuổi và tài năng phép thuật bẩm sinh. Với kiếm thay vì đũa và sách bùa chú thay vì Internet, liệu Rudeus có thể chuộc lỗi ở vùng đất kỳ diệu nhưng nguy hiểm này không?', 1),
 (3, 'SPY X FAMILY P1', '75000', 'https://upload.wikimedia.org/wikipedia/vi/thumb/0/07/B%C3%ACa_manga_Spy_%C3%97_Family_t%E1%BA%ADp_1_thu%E1%BB%99c_nh%C3%A0_xu%E1%BA%A5t_b%E1%BA%A3n_Kim_%C4%90%E1%BB%93ng.jpg/220px-B%C3%ACa_manga_Spy_%C3%97_Family_t%E1%BA%ADp_1_thu%E1%BB%99c_nh%C3%A0_xu%E1%BA%A5t_b%E1%BA%A3n_Kim_%C4%90%E1%BB%93ng.jpg', 'Câu chuyện kể về một điệp viên của \"Tây Quốc\" Westalis (西国ウェスタリス) có mật danh là \"Hoàng hôn\", cố gắng xây dựng một \"gia đình kiểu mẫu\" nhằm thu thập thông tin tình báo tại nước đối địch, \"Đông Quốc\" Ostania (東国オスタニア)', 2),
@@ -120,8 +120,53 @@ INSERT INTO `sanphammoi` (`id`, `tensp`, `giasp`, `hinhanh`, `mota`, `loai`) VAL
 (10, 'Tonikaku Kawaii V16', '125000', 'https://m.media-amazon.com/images/I/71gR3DMt-QL._SY466_.jpg', 'Kể từ ngày cha mẹ đặt tên cho mình, Nasa Yuzaki đã cảm thấy được kết nối với không gian vũ trụ…dù anh có thích hay không. Những nỗ lực của anh để vượt trội hơn chương trình không gian đã đi chệch hướng khi một tai nạn giới thiệu anh với Tsukasa, một cô gái bí ẩn có sức mạnh kỳ lạ. Cô ấy là người ngoài hành tinh, nữ thần mặt trăng hay cái gì khác? Vì cô nhất quyết muốn cưới anh nên Nasa sẽ có rất nhiều cơ hội để tìm hiểu! \n Cuối cùng sự thật về quá khứ của Tsukasa cũng được tiết lộ. Theo dõi hành trình dài của cô khi cô thoát khỏi cái chết, chiến đấu vì tự do, mơ về mặt trăng xa xôi và cuối cùng, sau nhiều thế kỷ tìm kiếm, cô đã tìm thấy tình yêu. Sau tất cả những điều đó, có lẽ đã đến lúc ra ngoài ăn tối và hát karaoke. Một cô gái thỉnh thoảng xứng đáng được nghỉ ngơi.', 3),
 (11, 'Dragon Ball Super', '35000', 'https://store.crunchyroll.com/on/demandware.static/-/Sites-crunchyroll-master-catalog/default/dwef08771a/rightstuf/9781974734511_manga-dragon-ball-super-volume-17-primary.jpg', 'Trận chiến giữa Granolah, Goku và Vegeta tiếp tục diễn ra trên hành tinh Ngũ cốc. Mặc dù trận chiến này được thúc đẩy bởi sự dối trá và thao túng của các Heeters, nhưng động lực trả thù cháy bỏng của Granolah đã khiến anh tin rằng đây là một cuộc chiến đáng chết - và đó chính xác là những gì các Heeters mong muốn. \n Cảm thấy có điều gì đó không ổn, Vegeta bắt đầu xâu chuỗi bí ẩn về lý do tại sao Granola lại ghét người Saiyan đến vậy. Nhưng liệu anh ấy có thể tìm ra sự thật kịp thời? Và liệu Granola có sẵn sàng lắng nghe không?!', 4),
 (12, 'Mushoku Tensei N23', '95000', 'https://images.penguinrandomhouse.com/cover/9781685796457', 'Đứa con thứ tư của Rudeus, Sieghart, được sinh ra với mái tóc màu xanh lá cây tươi sáng giống như Laplace từng lo sợ. Điềm báo càng trở nên tồi tệ hơn khi một người quen của Perugius xuất hiện và ra lệnh cho Rudeus đưa đứa con trai mới sinh của mình đến pháo đài nổi! Rudeus thề rằng kế hoạch chiến đấu với Laplace của anh ấy là không thay đổi và anh ấy sẽ chấp nhận mọi số phận vì lợi ích của gia đình mình… nhưng liệu điều đó có đủ với Perugius không?', 1),
-(13, 'SPY X FAMILY P6', '75000', 'https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974725137/spy-x-family-vol-6-9781974725137_lg.jpg', 'Điệp viên bậc thầy Twilight là vô song khi bí mật thực hiện các nhiệm vụ nguy hiểm vì sự phát triển của thế giới. Nhưng khi anh ấy nhận được nhiệm vụ quan trọng nhất—kết hôn và sinh con—cuối cùng anh ấy có thể gặp khó khăn! \n Twilight and Nightfall tham gia một giải đấu quần vợt dưới lòng đất, với hy vọng có được cơ hội lấy được tài liệu tình báo có nguy cơ đưa thế giới đến bờ vực chiến tranh! Nhưng liệu nhiệm vụ của họ có bị ảnh hưởng bởi mối tình bí mật của Nightfall với Twilight?!', 2),
-(14, '', '', '', '', );
+(13, 'SPY X FAMILY P6', '75000', 'https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781974725137/spy-x-family-vol-6-9781974725137_lg.jpg', 'Điệp viên bậc thầy Twilight là vô song khi bí mật thực hiện các nhiệm vụ nguy hiểm vì sự phát triển của thế giới. Nhưng khi anh ấy nhận được nhiệm vụ quan trọng nhất—kết hôn và sinh con—cuối cùng anh ấy có thể gặp khó khăn! n Twilight and Nightfall tham gia một giải đấu quần vợt dưới lòng đất, với hy vọng có được cơ hội lấy được tài liệu tình báo có nguy cơ đưa thế giới đến bờ vực chiến tranh! Nhưng liệu nhiệm vụ của họ có bị ảnh hưởng bởi mối tình bí mật của Nightfall với Twilight!', 2),
+(14, 'Goblin Slayer', '266000', 'https://waltscomicshop.com/cdn/shop/products/goblin-slayer-gn-vol-01-580907.jpg?v=1696023311&width=333', 'Tất cả thể loại bạn thích về Dark Fantasy đều có trong bộ truyện này...',4 ),
+(15, 'Mato seihei no slave', '80000', 'https://i.ebayimg.com/images/g/T0wAAOSwkmNl5glM/s-l1600.webp', 'kể về những cuộc chiến chống lại những con quỷ ở trong Ma đô (Thành phố ma thuật). Cùng tác giả với Akame ga Kill', 2);
+(16, 'KỊCH TRƯỜNG CỦA TAKEMICHI', '70000', 'https://m.media-amazon.com/images/I/81D+Hi+HNKL._AC_UY327_FMwebp_QL65_.jpg', 'Tên khác: Tokyo Manji Revengers Tokyo Revengers Toukyou Revengers 東京卍リベンジャーズ Takemichi, thanh niên thất nghiệp còn trinh, được biết rằng người con gái đầu tiên và cũng là duy nhất cho đến bây giờ mà anh hẹn hò từ trung học đã chết. Sau một vụ tai nạn, anh ta thấy mình được quay về những ngày cấp hai. Anh ta thề sẽ thay đổi tương lai và giữ lấy người con gái ấy, để làm việc đó, anh ta quyết định sẽ vươn lên làm trùm băng đảng khét tiếng nhất ở vùng Kantou.',4 ),
+(17, 'DỊCH VỤ CHO THUÊ BẠN GÁI', '125.100', 'https://cdn0.fahasa.com/media/catalog/product/9/7/9784065345689.jpg', 'Tác Giả: Miyajima Reiji Quéo Quèo, Biết Mô Tả Thế Nào Đây? Một Thằng Zin Tên Là Kazuya 19 Năm Mới Có Bồ Không Bao Lâu Thì Bị Đá, Thế Là Cậu Ta Phải Sử Dụng Dịch Vụ Hẹn Hò Thuê, Cứ Trả Xiền Là Ngày Đó Bạn Sẽ Có Bạn Gái Ngay! Cậu Ta Đã Thuê Mizuhara Làm Bạn Gái Mình, Cô Nàng Thì Cứ Công Việc (Méo Có Yêu Thương Gì Đâu) Mà Thả Thính, Còn Chàng Ta Thì Đớp Thính Vô Tội Vạ, Cho Đến Khi… Đến Khi Kazuya Bớt Sống Ảo, Cậu Ta Ngưng Đớp Thính Và Tự Sẽ Kiếm Bạn Gái Thật Cho Mình Thì Mới Hớ Ra Mizuhara Học Cùn',2 ),
+(18, 'REBUILD WORLD', '180000', 'https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B600%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&set=key%5Bresolve.format%5D,value%5Bwebp%5D&source=url%5Bhttps://prodimage.images-bn.com/pimages/9781718390980_p0_v1_s600x595.jpg%5D&scale=options%5Blimit%5D,size%5B600x10000%5D&sink=format%5Bwebp%5D', 'Cái tên nói lên tất cả, thế giới bị hủy diệt bởi công nghệ hay cái mẹ gì đó éo biết. Main nhà ta là một trong đám sống sót, nhưng đám còn sống lại éo thích chung thuyền, main bị đấm sml và rồi đc 1 cô gái đến cứu. Éo biết cổ là cái mẹ gì luôn nhưng ngon vcđ',4 ),
+(19, 'SHUUMATSU NO VALKYRIE', '120000', 'https://cdn0.fahasa.com/media/catalog/product/9/7/9784867201145.jpg', 'Các vị thần mở hội nghị để bàn về sự sống còn của nhân loại. Tất cả đều quyết định "kết liễu" con người, chỉ duy một valkyrie đứng lên phản đối bằng cách đề nghị 1 cuộc chiến giữa thần và người. Cuộc chiến quyết định số phận của nhân loại này sẽ ra sao? Xin mời đón đọc.',2 ),
+
+
+(20, 'KUCHI GA SAKETEMO KIMI NI WA', '120000', 'https://i.ebayimg.com/images/g/cd4AAOSw3vhkp~yw/s-l960.webp', 'Không Còn Thằng Bé Shota Nữa Mà Thay Vào Đó Là Thanh Niên Cao Trung Hừng Hực Sức Trẻ Với Chụy Khẩu Liệt Nữ, Ơ Mà Cưới Nhau Đi Chứ',3 ),
+
+
+(21, 'KIMI WA MEIDO-SAMA', '140000', 'https://jpbookstore.com/cdn/shop/products/611pqRtxU7L_1024x1024@2x.jpg?v=1652689566', 'Một cô hầu gái đến nhà Hitoyoshi để tìm việc. Vì tội mê gái mà Hitoyoshi đã cho cô hầu gái này vào nhà. Nhưng sau đó anh main mới phát hiện ra cô hầu gái này là một sát thủ... Đây là câu chuyện về cô hầu gái sát thủ xinh đẹp đi tìm gia đình cho mình.',3 ),
+
+
+(22, 'SHOUNEN NO ABYSS', '130000', 'https://jpbookstore.com/cdn/shop/products/A1IzzjAYkuL_1024x1024@2x.jpg?v=1663572015', 'Trong một thị trấn nhàm chán và ngày qua ngày không có gì thay đổi, Reiji Kurose, một học sinh trung học, "chỉ" còn sống. Gia đình, ước mơ tương lai, bạn thời thơ ấu. Tất cả đều trói buộc cậu ấy vào thị trấn này. Cậu luôn nghĩ, "Tôi chỉ sống." cho đến khi cô ấy gặp cô ấy. Có hy vọng để sống? Có ánh sáng nào ở phía trước không? The World End Boy Meets Girl bắt đầu',2 ),
+
+
+(23, 'TÔI LÀ NGƯỜI HÙNG', '60000', 'https://m.media-amazon.com/images/I/51RSM5j85mL._SY445_SX342_.jpg', 'Tôi là người hùng ~ pj kinh dị Bảo đảm không dở, dù 10 chap đầu cực nhảm',2 ),
+
+
+(24, 'SHINAI NARU BOKU E SATSUI WO KOMETE', '75000', 'https://www.japanzon.com/76175-product_large/the-killer-inside-shinai-naru-boku-e-satsui-wo-komete-vol1-young-magazine-kc-special-japanese-version.jpg', 'Urashima Eiji, một sinh viên đại học, đi ngủ sau một đêm uống rượu vui vẻ với bạn bè. Khi tỉnh dậy, anh phát hiện ra một cô gái xinh đẹp bên cạnh, người đối xử với anh như thể họ đang trong một mối quan hệ yêu đương. Sau đó, anh phát hiện ra rằng 4 ngày đã trôi qua kể từ khi anh đi ra ngoài cùng với đám bạn của mình. Anh ấy đã làm gì trong suốt thời gian đó và tại sao anh ấy không có ký ức về nó?. Khi đối mặt với thực tế đó, anh sẽ bị cuốn vào bi kịch ...',4 ),
+
+
+(25, 'SHINIGAMI BOCCHAN TO KURO MAID', '80000', 'https://cdn0.fahasa.com/media/catalog/product/9/7/9784091280992.jpg', '1 chàng trai mang lời nguyền chạm đâu chết đó và cô hầu gái của cậu',3 ),
+
+
+(26, 'YUUSHA GA SHINDA!', '90.000', 'https://pictures.abebooks.com/isbn/9784091261397-us.jpg', 'Sion Bladen đã phong ấn Quỷ vương và quân đội của hắn tại Cổng địa ngục. Giờ đây, khi Quỷ vương đã sẵn sàng trỗi dậy trở lại, Sion quay trở lại trận chiến để đối mặt với kẻ thù không đội trời chung của mình. Thật không may, cuối cùng anh ta lại bị giết trong một cái bẫy do người nông dân Touka Scott đào, người đang cố gắng tự vệ khỏi lũ quỷ. Không còn lựa chọn nào khác, pháp sư chiêu hồn Anri Haysworth đưa linh hồn biến thái của Touka vào cơ thể đã chết của Sion để đóng giả anh ta. Cùng với người bạn thời thơ ấu của Touka là Yuna Eunice, ba anh hùng không phù hợp phải vượt qua thử thách và phong ấn Cổng Địa ngục.',4 ),
+
+
+(27, 'TATE NO YUUSHA NO NARIAGARI 9', '203.000', 'https://cdn0.fahasa.com/media/catalog/product/i/m/image_145443.jpg', 'Iwatani Naofumi bị triệu hồi đến một thế giới khác cùng với 3 người khác để trở thành những anh hùng của thế giới đó. Mỗi người họ đều được trang bị từng vũ khí huyền thoại riêng biệt khi bị triệu hồi. Naofumi tình cờ nhận được chiếc khiên huyền thoại làm vũ khí. Nhưng do sự thiếu uy tín cũng như kinh nghiệm của mình, rốt cuộc cậu chỉ có được duy nhất một người đồng đôi trong khi những anh hùng khác lại có đến vài người',1 ),
+
+
+(28, 'Goblin Slayer', '300000', 'https://m.media-amazon.com/images/I/91HLjQI2cmL._SL1500_.jpg', 'Một nữ tu sĩ trẻ đã thành lập nhóm phiêu lưu đầu tiên của mình, nhưng gần như ngay lập tức họ thấy mình gặp nạn. Đó là Goblin Slayer đến để giải cứu họ - một người đàn ông đã cống hiến cuộc đời mình để tiêu diệt tất cả Goblin, bằng mọi cách cần thiết. Và khi tin đồn về chiến công của anh ấy bắt đầu lan truyền, không biết ai có thể gọi tiếp theo...',2 ),
+
+
+(29, 'WIND BREAKER', '166.000', 'https://cdn0.fahasa.com/media/catalog/product/9/7/9784065229798.jpg', 'Nhân vật chính của Wind Breaker là Haruka, một nam sinh chỉ có ước mơ trở thành người mạnh nhất trong số những kẻ mạnh. Sau khi nhập học tại trường Furin, Haruka nhận ra rằng những kẻ mạnh tại ngôi trường này sử dụng sức mạnh của họ để bảo vệ thành phố. Điều này dẫn Haruka vào một cuộc hành trình mà cậu không thể ngờ đến.',2 ),
+
+
+(30, 'TOKYO REVENGERS', '200.000', 'https://m.media-amazon.com/images/I/91fvgvLqJML._SY385_.jpg', 'Xem tin tức, Takemichi Hanagaki biết rằng bạn gái của mình từ thời trung học, Hinata Tachibana, đã qua đời. Người bạn gái duy nhất mà anh từng có vừa bị giết bởi một nhóm phản diện được gọi là Tokyo Manji Gang. Anh ta sống trong một căn hộ tồi tàn với những bức tường mỏng, và ông chủ trẻ hơn sáu tuổi của anh ta đối xử với anh ta như một thằng ngốc. Thêm vào đó, anh ấy là một trinh nữ hoàn chỉnh và hoàn toàn... Ở đỉnh cao của cuộc đời dưới đáy đá, anh ấy đột nhiên nhảy vọt thời gian 12 năm trở lại những ngày học cấp hai !! Để cứu Hinata, và thay đổi cuộc sống mà anh ta đã bỏ trốn, Takemichi bán thời gian vô vọng phải nhắm đến đỉnh cao của băng đảng tội phạm nham hiểm nhất Kanto !!',1);
+
+
+
+
+
+
+
 
 -- --------------------------------------------------------
 
@@ -129,7 +174,7 @@ INSERT INTO `sanphammoi` (`id`, `tensp`, `giasp`, `hinhanh`, `mota`, `loai`) VAL
 -- Cấu trúc bảng cho bảng `user`
 --
 
-CREATE TABLE `user` (
+CREATE TABLE user (
   `id` int(11) NOT NULL,
   `email` varchar(250) NOT NULL,
   `pass` varchar(250) NOT NULL,
@@ -141,7 +186,7 @@ CREATE TABLE `user` (
 -- Đang đổ dữ liệu cho bảng `user`
 --
 
-INSERT INTO `user` (`id`, `email`, `pass`, `username`, `mobile`) VALUES
+INSERT INTO user (`id`, `email`, `pass`, `username`, `mobile`) VALUES
 (2, 'vtdhnv@gmail.com', '123', 'vthdat', '0842596707'),
 (5, 'test1@gmail.com', '123', 'dat', '0123456789'),
 (6, '2254810175@vaa.edu.vn', '123', 'datvuthanh', '0842596707');
@@ -152,25 +197,25 @@ INSERT INTO `user` (`id`, `email`, `pass`, `username`, `mobile`) VALUES
 --
 -- Chỉ mục cho bảng `donhang`
 --
-ALTER TABLE `donhang`
+ALTER TABLE donhang
   ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `sanpham`
 --
-ALTER TABLE `sanpham`
+ALTER TABLE sanpham
   ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `sanphammoi`
 --
-ALTER TABLE `sanphammoi`
+ALTER TABLE sanphammoi
   ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `user`
 --
-ALTER TABLE `user`
+ALTER TABLE user
   ADD PRIMARY KEY (`id`);
 
 --
@@ -180,25 +225,25 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT cho bảng `donhang`
 --
-ALTER TABLE `donhang`
+ALTER TABLE donhang
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT cho bảng `sanpham`
 --
-ALTER TABLE `sanpham`
+ALTER TABLE sanpham
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `sanphammoi`
 --
-ALTER TABLE `sanphammoi`
+ALTER TABLE sanphammoi
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT cho bảng `user`
 --
-ALTER TABLE `user`
+ALTER TABLE user
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
