@@ -107,7 +107,7 @@ CREATE TABLE sanphammoi (
 -- Đang đổ dữ liệu cho bảng `sanphammoi
 --
 
-INSERT INTO sanphammoi ('id', 'tensp', 'giasp', 'hinhanh', 'mota', 'loai') VALUES
+INSERT INTO `sanphammoi` (`id`, `tensp`, `giasp`, `hinhanh`, `mota`, `loai`) VALUES
 (1, 'Jujutsu Kaisen V1', '50000', 'https://upload.wikimedia.org/wikipedia/vi/8/82/Jujutsu_Kaisen_vol_1_cover.jpeg', 'Trong vũ trụ Chú thuật hồi chiến, tất cả sinh vật sống đều phát ra một loại năng lượng được gọi là chú lực, sinh ra từ cảm xúc tiêu cực chảy đều trong cơ thể. Những người bình thường không thể kiểm soát được dòng chảy này trong cơ thể họ. Hậu quả là họ để cho chú lực phát tán ra ngoài, hình thành nên nguyền hồn, một chủng sinh vật có dã tâm làm chuyện tai ác với nhân loại. Nguyền hồn xuất hiện dưới hình thù những con quái vật ghê rợn.\n\nChú thuật sư là những người có khả năng kiểm soát dòng chảy chú lực trong cơ thể họ, cho phép họ sử dụng chú lực theo ý muốn cũng như giảm thiểu sự phát tán của nó. Chú thuật sư và nguyền hồn cấp cao có thể tinh luyện loại năng lượng này và sử dụng nó để thực hiện chú thuật thức. Loại thuật thức này dường như là đặc thù với mỗi cá nhân hoặc gia tộc của họ. Bành trướng lĩnh vực là một dạng nâng cấp của chú thuật thức, qua đó chú thuật sư có thể sử dụng chú lực để tạo dựng nên một kết giới bao trùm khu vực xung quanh. Trong kết giới đó, mọi đòn tấn công của người sử dụng nó trở nên mạnh hơn.', 4),
 (2, 'Mushoku Tensei N9', '80000', 'https://comichub.blob.core.windows.net/high/def8df4a-625a-43bc-9679-fea2bd84ece2.jpg', 'Một otaku thất nghiệp vừa chạm đến điểm thấp nhất trong cuộc đời. Anh ấy không muốn gì hơn ngoài khả năng bắt đầu lại, nhưng đúng như anh ấy nghĩ điều đó có thể xảy ra… anh ấy bị một chiếc xe tải đâm và chết! Ngạc nhiên thay, anh thấy mình tái sinh trong cơ thể một đứa trẻ sơ sinh trong một thế giới mới kỳ lạ của kiếm và ma thuật. Danh tính của anh ấy bây giờ là Rudeus Greyrat, nhưng anh ấy vẫn giữ được ký ức về kiếp trước. Tái sinh trong một gia đình mới, Rudeus tận dụng những kinh nghiệm trong quá khứ của mình để tiến lên trong thế giới giả tưởng này với tư cách là một thần đồng thực sự có năng khiếu trưởng thành hơn tuổi và tài năng phép thuật bẩm sinh. Với kiếm thay vì đũa và sách bùa chú thay vì Internet, liệu Rudeus có thể chuộc lỗi ở vùng đất kỳ diệu nhưng nguy hiểm này không?', 1),
 (3, 'SPY X FAMILY P1', '75000', 'https://upload.wikimedia.org/wikipedia/vi/thumb/0/07/B%C3%ACa_manga_Spy_%C3%97_Family_t%E1%BA%ADp_1_thu%E1%BB%99c_nh%C3%A0_xu%E1%BA%A5t_b%E1%BA%A3n_Kim_%C4%90%E1%BB%93ng.jpg/220px-B%C3%ACa_manga_Spy_%C3%97_Family_t%E1%BA%ADp_1_thu%E1%BB%99c_nh%C3%A0_xu%E1%BA%A5t_b%E1%BA%A3n_Kim_%C4%90%E1%BB%93ng.jpg', 'Câu chuyện kể về một điệp viên của \"Tây Quốc\" Westalis (西国ウェスタリス) có mật danh là \"Hoàng hôn\", cố gắng xây dựng một \"gia đình kiểu mẫu\" nhằm thu thập thông tin tình báo tại nước đối địch, \"Đông Quốc\" Ostania (東国オスタニア)', 2),
@@ -160,11 +160,6 @@ INSERT INTO sanphammoi ('id', 'tensp', 'giasp', 'hinhanh', 'mota', 'loai') VALUE
 
 
 (30, 'TOKYO REVENGERS', '200.000', 'https://m.media-amazon.com/images/I/91fvgvLqJML._SY385_.jpg', 'Xem tin tức, Takemichi Hanagaki biết rằng bạn gái của mình từ thời trung học, Hinata Tachibana, đã qua đời. Người bạn gái duy nhất mà anh từng có vừa bị giết bởi một nhóm phản diện được gọi là Tokyo Manji Gang. Anh ta sống trong một căn hộ tồi tàn với những bức tường mỏng, và ông chủ trẻ hơn sáu tuổi của anh ta đối xử với anh ta như một thằng ngốc. Thêm vào đó, anh ấy là một trinh nữ hoàn chỉnh và hoàn toàn... Ở đỉnh cao của cuộc đời dưới đáy đá, anh ấy đột nhiên nhảy vọt thời gian 12 năm trở lại những ngày học cấp hai !! Để cứu Hinata, và thay đổi cuộc sống mà anh ta đã bỏ trốn, Takemichi bán thời gian vô vọng phải nhắm đến đỉnh cao của băng đảng tội phạm nham hiểm nhất Kanto !!',1);
-
-
-
-
-
 
 
 
