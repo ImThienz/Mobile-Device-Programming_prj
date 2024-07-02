@@ -19,6 +19,6 @@ if (!empty($result)){
         'result' => $result
     ];
 }
-print_r(json_encode($arr));
+echo json_encode($arr);
 
 ?>
