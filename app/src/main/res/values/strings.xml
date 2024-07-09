@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">APP QUẢN LÍ</string>
+    <string name="action_search">Search</string>
+    <string name="gi_25000vnd">Giá 25000VND</string>
+    <string name="th_m_v_o_gi_h_ng">Thêm vào giỏ hàng</string>
+    <string name="dang_nhap">Dang Nhap</string>
+</resources>

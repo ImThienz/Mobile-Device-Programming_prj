@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFD740"
+    tools:context=".activity.LienHeActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="LIÊN HỆ KHI GẶP SỰ CỐ!"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="16dp"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADMIN 1: Chăm sóc khách hàng, hỗ trợ sách lỗi, đổi trả sách"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btncall1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ADMIN 1 CALL"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/holo_blue_dark" />
+
+        <Button
+            android:id="@+id/btnsms1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ADMIN 1 SMS"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/holo_blue_dark" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADMIN 2: Tư vấn sản phẩm, hỗ trợ kỹ thuật"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btncall2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ADMIN 2 CALL"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/holo_green_dark" />
+
+        <Button
+            android:id="@+id/btnsms2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ADMIN 2 SMS"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/holo_green_dark" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADMIN 3: Hỗ trợ thanh toán, tài khoản"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btncall3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ADMIN 3 CALL"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/holo_red_dark" />
+
+        <Button
+            android:id="@+id/btnsms3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ADMIN 3 SMS"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/holo_red_dark" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liên hệ qua mạng xã hội"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/buttonFacebook"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Facebook"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/holo_blue_bright" />
+
+        <Button
+            android:id="@+id/buttonZalo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Zalo"
+            android:background="@android:color/transparent"
+            android:textColor="@android:color/holo_blue_light" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chúng tôi hỗ trợ 24/7, đảm bảo đổi trả sách nếu bị lỗi trong vòng 30 ngày, trao đổi sách khác cùng giá + 10%."
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        android:textSize="14sp"
+        android:paddingTop="16dp"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>
