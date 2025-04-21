@@ -8,6 +8,6 @@ This is my reference model from #NH_Android so, pls respect the author. Thanks a
 # ![Demo](demo.gif)
 
 # Notes:
-- branch [main]: database  
+- branch [main]: database (MySQL)  
 - branch [master]: prj on Android Studio (Java)  
 - branch [report]: my report
