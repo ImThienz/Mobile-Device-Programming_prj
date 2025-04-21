@@ -1,5 +1,6 @@
 # Tutorial:
-Go to Mobile-Device-Programming_prj/app/src/main/java/com/example/manager/utils/Utils.java and paste your ip address into BASE_URL="http://<insert-your-ip-address-here>/truyentranhN8/";  
+Go to Mobile-Device-Programming_prj/app/src/main/java/com/example/manager/utils/Utils.java and paste your ip address into `BASE_URL="http://<insert-your-ip-address-here>/truyentranhN8/";`
+  
 ## How to check ip address?
 Open CMD (Windows+S) and insert 'ipconfig' >>  
 <br>
