@@ -1,11 +1,10 @@
 # Prj on Android Studio (Java) - DB MySQL
 from Vietnam Aviation Academy - IT_K16_HK6 - 0101000855
 
-Change branch from #main(DEFAULT) to #master to see my prj! <br><br>
-This is my reference model from #NH_Android so, pls respect the author. Thanks a lot!
+Change branch from #main(DEFAULT) to #master to see my prj! Thanks a lot! <br><br>
 
-
-# ![Demo](demo.gif)
+## 🎬 Demo Giao diện
+![Demo](demo.gif)
 
 # Notes:
 - branch [main]: database (MySQL)  
